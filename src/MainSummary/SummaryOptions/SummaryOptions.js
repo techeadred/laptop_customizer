@@ -4,9 +4,9 @@ import './SummaryOptions.css';
 
 class SummaryOptions extends React.Component {
     render() {
-        const summary = Object.keys(this.state.selected).map((feature, idx) => {
+        const summary = Object.keys(this.props.selected).map((feature, idx) => {
             const featureHash = feature + '-' + idx;
-            const selectedOption = this.state.selected[feature];
+            const selectedOption = this.props.selected[feature];
 
             return (
                 <div className="summary__option" key={featureHash}>
