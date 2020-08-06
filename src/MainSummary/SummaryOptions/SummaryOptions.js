@@ -13,7 +13,7 @@ class SummaryOptions extends React.Component {
                     <div className="summary__option__label">{feature} </div>
                     <div className="summary__option__value">{selectedOption.name}</div>
                     <div className="summary__option__cost">
-                        {this.USCurrencyFormat.format(selectedOption.cost)}
+                        {this.props.USCurrencyFormat.format(selectedOption.cost)}
                     </div>
                 </div>
             );

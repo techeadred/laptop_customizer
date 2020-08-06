@@ -28,7 +28,7 @@ class Features extends React.Component {
                         onChange={e => this.updateFeature(feature, item)}
                     />
                     <label htmlFor={itemHash} className="feature__label">
-                        {item.name} ({this.USCurrencyFormat.format(item.cost)})
+                        {item.name} ({this.props.USCurrencyFormat.format(item.cost)})
             </label>
                 </div>
             );

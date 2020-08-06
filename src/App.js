@@ -30,15 +30,22 @@ class App extends React.Component {
     }}
 
     render() {
+      const USCurrencyFormat = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD'
+      });
+
       return (
         <div className="App">
           <Head />
           <main>
             <MainForm 
               features={this.props.features}
-              selected={this.state.selected}/>
+              selected={this.state.selected}
+              currencyFormat={USCurrencyFormat}/>
             <MainSummary
-              selected={this.state.selected}/>
+              selected={this.state.selected}
+              currencyFormat={USCurrencyFormat}/>
           </main>
         </div>
       );

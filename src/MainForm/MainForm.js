@@ -10,7 +10,8 @@ class MainForm extends React.Component {
                 <h2>Customize your laptop</h2>
                 <Features 
                     features={this.props.features}
-                    selected={this.props.selected}/>
+                    selected={this.props.selected}
+                    currencyFormat={this.props.USCurrencyFormat}/>
             </form>
         )
     }
