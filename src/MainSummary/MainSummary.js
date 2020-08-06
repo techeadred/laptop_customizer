@@ -10,10 +10,10 @@ class MainSummary extends React.Component {
             <section class="main__summary">
                 <h2>Your cart</h2>
                 <SummaryOptions 
-                    Selected={this.props.selected}
+                    selected={this.props.selected}
                     USCurrency={this.USCurrencyFormat}/>
                 <SummaryTotal 
-                    Selected={this.props.selected}
+                    selected={this.props.selected}
                     USCurrency={this.USCurrencyFormat}/>
             </section>
         )

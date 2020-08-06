@@ -8,7 +8,9 @@ class MainForm extends React.Component {
         return (
             <form className="main__form">
                 <h2>Customize your laptop</h2>
-                <Features Selected={this.props.selected}/>
+                <Features 
+                    features={this.props.features}
+                    selected={this.props.selected}/>
             </form>
         )
     }

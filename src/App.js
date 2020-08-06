@@ -4,9 +4,6 @@ import MainSummary from './MainSummary/MainSummary';
 import MainForm from './MainForm/MainForm';
 
 
-
-
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -31,14 +28,6 @@ class App extends React.Component {
       }
     }}
 
-    updateFeature = (feature, newValue) => {
-      const selected = Object.assign({}, this.state.selected);
-      selected[feature] = newValue;
-      this.setState({
-        selected
-      });
-    };
-
     render() {
       const USCurrencyFormat = new Intl.NumberFormat('en-US', {
         style: 'currency',
@@ -51,9 +40,11 @@ class App extends React.Component {
             <h1>ELF Computing | Laptops</h1>
           </header>
           <main>
-            <MainForm />
+            <MainForm 
+              features={this.props.features}
+              selected={this.state.selected}/>
             <MainSummary
-              Selected={this.state.selected}
+              selected={this.state.selected}
               USCurrency={USCurrencyFormat} />
           </main>
         </div>
