@@ -29,10 +29,7 @@ class App extends React.Component {
     }}
 
     render() {
-      const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD'
-      });
+      
 
       return (
         <div className="App">
@@ -44,8 +41,7 @@ class App extends React.Component {
               features={this.props.features}
               selected={this.state.selected}/>
             <MainSummary
-              selected={this.state.selected}
-              USCurrency={USCurrencyFormat} />
+              selected={this.state.selected}/>
           </main>
         </div>
       );

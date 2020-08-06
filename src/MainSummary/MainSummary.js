@@ -6,15 +6,20 @@ import './MainSummary.css';
 
 class MainSummary extends React.Component {
     render() {
+        const USCurrencyFormat = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        });
+
         return (
             <section class="main__summary">
                 <h2>Your cart</h2>
                 <SummaryOptions 
                     selected={this.props.selected}
-                    USCurrency={this.USCurrencyFormat}/>
+                    USCurrency={USCurrencyFormat}/>
                 <SummaryTotal 
                     selected={this.props.selected}
-                    USCurrency={this.USCurrencyFormat}/>
+                    USCurrency={USCurrencyFormat}/>
             </section>
         )
     }
