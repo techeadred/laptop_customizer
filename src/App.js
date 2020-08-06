@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Head from './Head/Head';
 import MainSummary from './MainSummary/MainSummary';
 import MainForm from './MainForm/MainForm';
 
@@ -29,13 +30,9 @@ class App extends React.Component {
     }}
 
     render() {
-      
-
       return (
         <div className="App">
-          <header>
-            <h1>ELF Computing | Laptops</h1>
-          </header>
+          <Head />
           <main>
             <MainForm 
               features={this.props.features}
