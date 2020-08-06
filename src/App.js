@@ -42,10 +42,10 @@ class App extends React.Component {
             <MainForm 
               features={this.props.features}
               selected={this.state.selected}
-              currencyFormat={USCurrencyFormat}/>
+              USCurrencyFormat={USCurrencyFormat}/>
             <MainSummary
               selected={this.state.selected}
-              currencyFormat={USCurrencyFormat}/>
+              USCurrencyFormat={USCurrencyFormat}/>
           </main>
         </div>
       );

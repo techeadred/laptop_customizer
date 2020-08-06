@@ -11,7 +11,7 @@ class MainForm extends React.Component {
                 <Features 
                     features={this.props.features}
                     selected={this.props.selected}
-                    currencyFormat={this.props.USCurrencyFormat}/>
+                    USCurrencyFormat={this.props.USCurrencyFormat}/>
             </form>
         )
     }
