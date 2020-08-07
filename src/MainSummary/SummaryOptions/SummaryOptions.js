@@ -18,8 +18,10 @@ class SummaryOptions extends React.Component {
                 </div>
             );
         });
-        return (
+    return (
+        <>
             {summary}
+        </>
         )
     }
 };

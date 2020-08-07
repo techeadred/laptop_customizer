@@ -6,6 +6,10 @@ import MainForm from './MainForm/MainForm';
 
 
 class App extends React.Component {
+  static defaultProps = {
+    features: []
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -27,33 +31,45 @@ class App extends React.Component {
           cost: 1500
         }
       }
-    }}
-
-    render() {
-      const USCurrencyFormat = new Intl.NumberFormat('en-US', {
-        style: 'currency',
-        currency: 'USD'
-      });
-
-      return (
-        <div className="App">
-          <Head />
-          <main>
-            <MainForm 
-              features={this.props.features}
-              selected={this.state.selected}
-              USCurrencyFormat={USCurrencyFormat}/>
-            <MainSummary
-              selected={this.state.selected}
-              USCurrencyFormat={USCurrencyFormat}/>
-          </main>
-        </div>
-      );
     }
   }
-  
 
-  export default App;
+
+  updateFeature = (feature, newValue) => {
+    const selected = Object.assign({}, this.state.selected);
+    selected[feature] = newValue;
+    this.setState({
+      selected
+    });
+  };
+
+  render() {
+    const USCurrencyFormat = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD'
+    });
+
+
+    return (
+      <div className="App">
+        <Head />
+        <main>
+          <MainForm
+            features={this.props.features}
+            selected={this.state.selected}
+            updateFeature={this.updateFeature}
+            USCurrencyFormat={USCurrencyFormat} />
+          <MainSummary
+            selected={this.state.selected}
+            USCurrencyFormat={USCurrencyFormat} />
+        </main>
+      </div>
+    );
+  }
+}
+
+
+export default App;
 
 
   // handleUpdateFeature = {(feature, newValue)=>this.updateFeature(feature, newValue)}/
