@@ -7,7 +7,7 @@ import './MainSummary.css';
 class MainSummary extends React.Component {
     render() {
         return (
-            <section class="main__summary">
+            <section className="main__summary">
                 <h2>Your cart</h2>
                 <SummaryOptions 
                     selected={this.props.selected}
