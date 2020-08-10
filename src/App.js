@@ -56,7 +56,7 @@ class App extends React.Component {
         <Head />
         <main>
           <MainForm
-            features={this.Features}
+            features={Features}
             selected={this.state.selected}
             updateFeature={this.updateFeature}
             USCurrencyFormat={USCurrencyFormat} />
