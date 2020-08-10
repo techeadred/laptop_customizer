@@ -3,7 +3,7 @@ import './App.css';
 import Head from './Head/Head';
 import MainSummary from './MainSummary/MainSummary';
 import MainForm from './MainForm/MainForm';
-import Features from './Features';
+import ConstFeatures from './ConstFeatures';
 
 
 class App extends React.Component {
@@ -56,7 +56,7 @@ class App extends React.Component {
         <Head />
         <main>
           <MainForm
-            features={Features}
+            features={ConstFeatures}
             selected={this.state.selected}
             updateFeature={this.updateFeature}
             USCurrencyFormat={USCurrencyFormat} />
