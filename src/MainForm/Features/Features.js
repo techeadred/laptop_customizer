@@ -12,12 +12,13 @@ class Features extends React.Component {
                 const itemHash = slugify(JSON.stringify(item));
                 return (
                    <FeatureOptions 
-                        feature={this.feature}
-                        item={this.item}
-                        features={this.features}
+                        itemHash={itemHash}
+                        feature={feature}
+                        item={item}
+                        features={this.props.features}
                         selected={this.props.selected}
-                        itemHash={this.itemHash}
-                    />
+                        updateFeature={this.props.updateFeature}
+                        USCurrencyFormat={this.props.USCurrencyFormat}/>
                 );
             });
 

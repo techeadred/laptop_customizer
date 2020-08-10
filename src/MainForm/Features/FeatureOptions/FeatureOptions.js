@@ -2,7 +2,8 @@ import React from 'react';
 import slugify from 'slugify';
 
 
-function FeatureOptions (props) {
+class FeatureOptions extends React.Component {
+    render() {
         return (
             <div key={this.props.itemHash} className="feature__item">
                 <input
@@ -18,6 +19,7 @@ function FeatureOptions (props) {
             </label>
             </div>
         )
+    }
 }
 
 
